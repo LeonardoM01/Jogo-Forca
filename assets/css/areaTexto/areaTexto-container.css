@@ -1,0 +1,5 @@
+.areaTexto__container {
+	display: flex;
+	padding: 35px 16px;
+	flex-direction: column;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body {
+			background-color: #F3F5FC;
+		}
+	</style>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jogo da Forca</title>
+
+	<link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/cabecalho/cabecalho.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/cabecalho/cabecalho-icon.css">
+
+	<link rel="stylesheet" type="text/css" href="./assets/css/botoes/tela-inicial.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/botoes/botoes.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/botoes/botao-jogar.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/botoes/botao-novaPalavra.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/botoes/botao-enviar.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/botoes/botao-cancelar.css">
+
+	<link rel="stylesheet" type="text/css" href="./assets/css/areaTexto/areaTexto-container.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/areaTexto/areaTexto-form.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/areaTexto/areaTexto.css">
+
+	<link rel="stylesheet" type="text/css" href="./assets/css/areaJogo/canvas.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/areaJogo/areaJogo-container.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/areaJogo/botoes-jogo.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/areaJogo/botao-novoJogo.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/areaJogo/botao-desistir.css">
+
+</head>
+<body onload="menuPrincipal()" onkeypress="letraAcertada()">
+	<header class="cabecalho">
+		<img class="cabecalho__icon" src="./assets/img/alura-icon.svg">
+	</header>
+	<main>
+		<section id="tela__inicial" class="tela__inicial">
+			<div class="botoes">
+				<button id="jogar" class="botao__jogar" onclick="jogar()">Começar a Jogar</button> 
+				<button id="novaPalavra" class="botao__novaPalavra" onclick="adicionarPalavra()">Adicionar nova palavra</button>
+			</div>
+		</section>
+
+		<section id="areaTexto-container" class="areaTexto__container">
+				<textarea id="areaTexto" class="areaTexto" placeholder="Digite uma palavra"></textarea>
+				<div class="botoes novaPalavra">
+					<button id="botaoEnviar" type="submit" name="salvar" class="botao__enviar">Salvar e começar</button>
+
+					<button id="cancelar" class="botao__cancelar" onclick="menuPrincipal()">Cancelar</button>
+				</div>
+		</section>
+
+		<section id="areaJogo" class="areaJogo__container">
+
+			<canvas class="canvas" id="forca" height="520px" width="450px"></canvas>
+		</section>
+
+		<div class="botoes jogo">
+			<a id="botao__novoJogo" class="botao__novoJogo" onclick="jogar()">Novo jogo</a>
+			<a id="botao__desistir" class="botao__desistir" onclick="menuPrincipal()">Desistir</a>
+		</div>
+		
+		<style type="text/css">
+			.canvas {
+				padding: 0 40px;
+			}
+		</style>
+
+		<script type="text/javascript" src="canvas.js"></script>
+		<script type="text/javascript" src="funcoes.js"></script>
+	</main>
+	
+
+	
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+.tela__inicial {
+	height: 70vh;
+	padding: 24px;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}

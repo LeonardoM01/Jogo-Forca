@@ -1,0 +1,14 @@
+.botoes {
+	display: flex;
+	flex-direction: column;
+	gap: 17px;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	
+}
+
+.botoes.novaPalavra {
+	flex-direction: row;
+	justify-content: space-around;
+}
